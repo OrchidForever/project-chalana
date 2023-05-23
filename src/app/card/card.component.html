@@ -1,0 +1,11 @@
+<mat-card>
+    <mat-card-title>{{character.name}}</mat-card-title>
+    <mat-card-subtitle>{{character.race}}</mat-card-subtitle>
+    <img mat-card-image src='https://picsum.photos/200'>
+    <mat-card-content>
+        {{character.name}} is from the culture of {{character?.culture?.main}}. Inside that culture they were {{character?.culture?.subculture}} and of a bloodline of {{character?.culture?.bloodline}}. They are currently carring:
+        <ul>
+            <li *ngFor='let item of character.carriedItems'>{{item}}</li>
+        </ul>
+    </mat-card-content>
+</mat-card>
